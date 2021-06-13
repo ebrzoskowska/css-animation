@@ -1,0 +1,130 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  height:100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column; 
+}
+
+.column-container {
+  min-height: 33.33%;
+  width: 100vw;
+  display: flex;
+}
+
+.column-container:nth-child(2) {
+  justify-content: center; 
+}
+    
+.item {
+  width: 50%;
+  justify-content: center; 
+  align-items: center;
+  display: flex;
+}
+
+a, a:visited {
+  color: rgb(211, 172, 124);
+  text-decoration: none;
+  font-size: 50px;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 6px 8px 27px 2px rgba(162,133,64,0.59); 
+  box-shadow: 0px 10px 13px -7px #000000, 6px 8px 27px 2px rgba(162,133,64,0.59);
+}
+
+a:hover {
+  color: blanchedalmond;
+}
+
+.fa-border {
+  border: solid .03em rgb(211, 172, 124);
+  border-radius: .05em;
+}  
+
+img {
+  width: 50%;
+  filter: sepia(100%);
+  -webkit-filter: sepia(100%);
+}
+
+img:hover {
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
+.rotate-vert-center:hover {
+	-webkit-animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes rotate-vert-center {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotate-vert-center {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+.flip-horizontal-bottom:hover {
+	-webkit-animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes flip-horizontal-bottom {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+}
+@keyframes flip-horizontal-bottom {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+}
+
+
+
